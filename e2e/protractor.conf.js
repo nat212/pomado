@@ -12,9 +12,6 @@ exports.config = {
   specs: ['./src/**/*.e2e-spec.ts'],
   capabilities: {
     browserName: 'chrome',
-    chromeOptions: {
-      args: ['no-sandbox', 'disable-gpu']
-    }
   },
   directConnect: true,
   SELENIUM_PROMISE_MANAGER: false,

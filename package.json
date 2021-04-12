@@ -11,6 +11,7 @@
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "e2e": "ng e2e --port 4204",
+    "e2e:ci": "ng e2e --port 4204 --protractor-config e2e/protractor-ci.conf.js",
     "format:check": "prettier --config --list-different \"{e2e,src/{app,environments,assets}}/**/*{.ts,.js,.json,.css,.scss}\"",
     "format:fix": "pretty-quick",
     "firebase:emulators:start": "firebase emulators:start --export-on-exit --import ./firebase-data"
