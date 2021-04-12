@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "pomado"
+  "defaultProject": "pomado",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
