@@ -1,0 +1,63 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+    {
+      "type": "npm",
+      "script": "build:prod",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: build:prod",
+      "detail": "ng build --prod"
+    },
+    {
+      "type": "npm",
+      "script": "firebase:emulators:start",
+      "problemMatcher": [],
+      "label": "npm: firebase:emulators:start",
+      "detail": "firebase emulators:start"
+    },
+    {
+      "type": "npm",
+      "script": "lint:fix",
+      "problemMatcher": [],
+      "label": "npm: lint:fix",
+      "detail": "ng lint --fix"
+    },
+    {
+      "type": "npm",
+      "script": "format:check",
+      "problemMatcher": [],
+      "label": "npm: format:check",
+      "detail": "prettier --config --list-different \"{e2e,src/{app,environments,assets}}/**/*{.ts,.js,.json,.css,.scss}\""
+    },
+    {
+      "type": "npm",
+      "script": "format:fix",
+      "problemMatcher": [],
+      "label": "npm: format:fix",
+      "detail": "pretty-quick"
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "problemMatcher": [],
+      "label": "npm: start",
+      "detail": "ng serve"
+    },
+    {
+      "type": "npm",
+      "script": "test",
+      "group": "test",
+      "problemMatcher": [],
+      "label": "npm: test",
+      "detail": "ng test"
+    },
+    {
+      "type": "npm",
+      "script": "e2e",
+      "problemMatcher": [],
+      "label": "npm: e2e",
+      "detail": "ng e2e"
+    }
+  ]
+}
