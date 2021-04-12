@@ -41,6 +41,11 @@ jobs:
             ${{ runner.os }}-yarn-
       - run: yarn
       - run: yarn run test:ci
+      - uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: coverage/pomado/lcov.info
+          flags: unittests
   lint:
     runs-on: ubuntu-latest
     steps:
