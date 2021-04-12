@@ -1,10 +1,11 @@
 name: Deploy to LiveChannel
 
 on:
-  tags:
-    - v*.*
-    - v*.*.*
-    - v*
+  push:
+    tags:
+      - v*.*
+      - v*.*.*
+      - v*
 
 jobs:
   deploy_live_website:

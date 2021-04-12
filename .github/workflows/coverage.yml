@@ -1,9 +1,10 @@
 name: Upload coverage
 
 on:
-  branches:
-    - master
-    - develop
+  push:
+    branches:
+      - master
+      - develop
 
 jobs:
   coverage-report:
