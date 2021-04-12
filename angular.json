@@ -132,6 +132,6 @@
   },
   "defaultProject": "pomado",
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "defaultCollection": "@datorama/akita"
   }
 }
