@@ -72,7 +72,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "pomado:build"
+            "browserTarget": "pomado:build",
+            "port": 4203
           },
           "configurations": {
             "production": {
