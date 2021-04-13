@@ -1,0 +1,86 @@
+@import '~@angular/material/theming';
+@import 'colours';
+
+@include mat-core();
+
+$pm-theme: mat-light-theme($pm-primary, $pm-accent, $pm-warn);
+
+@include angular-material-theme($pm-theme);
+
+body {
+  // Primary colours
+  --primary-colour: mat-color($pm-primary);
+  --primary-lighter-colour: mat-color($pm-primary, lighter);
+  --primary-darker-colour: mat-color($pm-primary, darker);
+  // Primary text colours
+  --primary-contrast-colour: mat-color($pm-primary, contrast);
+  --primary-lighter-contrast-colour: mat-color($pm-primary, 'lighter-contrast');
+  --primary-darker-contrast-colour: mat-color($pm-primary, 'darker-contrast');
+  // Accent colours
+  --accent-colour: mat-color($pm-accent);
+  --accent-lighter-colour: mat-color($pm-accent, lighter);
+  --accent-darker-colour: mat-color($pm-accent, darker);
+  // Accent text colours
+  --accent-contrast-colour: mat-color($pm-accent, contrast);
+  --accent-lighter-contrast-colour: mat-color($pm-accent, 'lighter-contrast');
+  --accent-darker-contrast-colour: mat-color($pm-accent, 'darker-contrast');
+  // Warn colours
+  --warn-colour: mat-color($pm-warn);
+  --warn-lighter-colour: mat-color($pm-warn, lighter);
+  --warn-darker-colour: mat-color($pm-warn, darker);
+  // Warn text colours
+  --warn-contrast-colour: mat-color($pm-warn, contrast);
+  --warn-lighter-contrast-colour: mat-color($pm-warn, 'lighter-contrast');
+  --warn-darker-contrast-colour: mat-color($pm-warn, 'darker-contrast');
+}
+
+@mixin pm-primary($palette: 'default') {
+  background-color: mat-color($pm-primary, $palette);
+  color: mat-color($pm-primary, '#{palette}-contrast');
+}
+
+@mixin pm-accent($palette: 'default') {
+  background-color: mat-color($pm-accent, $palette);
+  color: mat-color($pm-accent, '#{palette}-contrast');
+}
+
+@mixin pm-warn($palette: 'default') {
+  background-color: mat-color($pm-warn, $palette);
+  color: mat-color($pm-warn, '#{palette}-contrast');
+}
+
+.pm-primary {
+  @include pm-primary();
+}
+
+.pm-primary-lighter {
+  @include pm-primary(lighter);
+}
+
+.pm-primary-darker {
+  @include pm-primary(darker);
+}
+
+.pm-accent {
+  @include pm-accent();
+}
+
+.pm-accent-lighter {
+  @include pm-accent(lighter);
+}
+
+.pm-accent-darker {
+  @include pm-accent(darker);
+}
+
+.pm-warn {
+  @include pm-warn();
+}
+
+.pm-warn-lighter {
+  @include pm-warn(lighter);
+}
+
+.pm-warn-darker {
+  @include pm-warn(darker);
+}

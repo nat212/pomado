@@ -1,0 +1,5 @@
+@import '~@angular/material/theming';
+
+$pm-primary: mat-palette($mat-pink);
+$pm-accent: mat-palette($mat-bluegrey);
+$pm-warn: mat-palette($mat-red);
